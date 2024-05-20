@@ -23,7 +23,7 @@ G_GENERATE_GIF = False
 # If True, generates a GIF of each image that marked an improvement in fitness. The GIF is created once the trial has ended (Ctrl-C will not work!)
 # Warning: this could be a VERY long GIF depending on the input image and parameters.
 
-G_MAX_DESTAG = 1333
+G_MAX_DESTAG = 750
 # Terminates the current trial and renders the final image after the current trial goes this many generations with no progress.
 # I'd recommend setting this number to be high, but not too high (somewhere between 200 - 1500).
 
@@ -35,7 +35,7 @@ G_CULLING = 2
 # Controls how many of the worst-performing Species are killed off and replaced by new offspring.
 # Recommended to be kept as an even number less than or equal to half of G_POP_SIZE.
 
-G_NUM_RECTS = 2048
+G_NUM_RECTS = 256
 # This can be any amount that you want. Bear in mind that more rects means slower work, but it also means a more precise end-product.
 
 G_NUM_MUTATIONS = math.floor(G_NUM_RECTS**(1/2))
