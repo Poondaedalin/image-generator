@@ -31,21 +31,21 @@ G_REFLUX_POP = False
 # When True, wipes the current population at the start of each trial, and replaces them with random new Species.
 # When False, the population is maintained throughout each trial.
 
+G_NUM_RECTS = 256
+# This can be any amount that you want. Bear in mind that more rects means slower work, but it also means a more precise end-product.
+
 G_CULLING = 2
 # Controls how many of the worst-performing Species are killed off and replaced by new offspring.
 # Recommended to be kept as an even number less than or equal to half of G_POP_SIZE.
 
-G_NUM_RECTS = 256
-# This can be any amount that you want. Bear in mind that more rects means slower work, but it also means a more precise end-product.
-
 G_NUM_MUTATIONS = math.floor(G_NUM_RECTS**(1/2))
 # This can be any integer, but I'd recommend keeping it somewhere between 1-16. (it generally caps around 64)
 
-G_NUM_GLOBAL_MUTATIONS = 2
-# Defaults to 0. Applies mutations to all members of the population EXCEPT the best two.
-
 G_POP_SIZE = 4
 # Again, this can be any integer, but you'll quickly see the performance impact for larger populations. Recommended at somewhere between 4 - 16.
+
+G_NUM_GLOBAL_MUTATIONS = 2
+# Defaults to 0. Applies mutations to all members of the population EXCEPT the best two. (currently unimplemented)
 
 G_WIDTH, G_HEIGHT = (32,32)
 # Both dimensions should be the same power of 2!
